@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>java Script assignment</title>
+</head>
+<body>
+    <script>
+        var str1 = 'Today is';
+var str2 = '      a beautiful day     ';
+var str3 = ' In Hawaii.     ';
+
+var result = str1 + ' ' + str2.trim() + str3.trim();
+document.write(result);
+</script>
+<br>
+<br>
+<script>
+    var enteredAlphabet = 'd'; 
+
+
+var lowerCaseChar = enteredAlphabet.toLowerCase();
+
+switch (true) {
+    
+    case ['a', 'e', 'i', 'o', 'u'].includes(lowerCaseChar):
+        documnt.write(enteredAlphabet + ' is a vowel.');
+        break;
+    
+
+    case /^[a-z]$/.test(lowerCaseChar):
+        document.write(enteredAlphabet + ' is a consonant.');
+        break;
+    
+    
+    default:
+        console.log(enteredAlphabet + ' is not an alphabet character.');
+        break;
+}
+
+</script>
+<br>
+<br>
+<script>
+function performArithmeticOperation(num1, num2, operator) {
+    let result=0;
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2 === 0) {
+                return 'Error: Division by zero is not allowed.';
+            }
+            result = num1 / num2;
+            break;
+        case '%':
+            result = num1 % num2;
+            break;
+        default:
+            return 'Error: Invalid operator. Please use +, -, *, /, or %.';
+    }
+
+    return `The result of ${num1} ${operator} ${num2} is ${result}.`;
+}
+const num1 = parseFloat(prompt("Enter the first number:"));
+const num2 = parseFloat(prompt("Enter the second number:"));
+const operator = prompt("Enter the operator (+, -, *, /, %):");
+if (isNaN(num1) || isNaN(num2)) {
+    alert('Error: Please enter valid numbers.');
+} else {
+    const result = performArithmeticOperation(num1, num2, operator);
+    document.write(result);
+}
+</script>
+
+</body>
+</html>

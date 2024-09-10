@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js qn9</title>
+</head>
+<body>
+    <script>
+    
+function findNumberPosition(array, target) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === target) {
+            return i;
+        }
+    }
+    return -1;
+}
+const numbers = [5, 3, 7, 1, 9, 6];
+
+document.writeln(findNumberPosition(numbers, 7)); 
+document.writeln(findNumberPosition(numbers, 4)); 
+</script>
+    
+</body>
+</html>
